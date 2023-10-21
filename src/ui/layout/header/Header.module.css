@@ -1,0 +1,16 @@
+.header {
+  position: relative;
+  background-color: var(--bg-color);
+  z-index: 2;
+}
+
+.nav {
+  height: var(--appbar-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+    color: var(--secondary);
+}

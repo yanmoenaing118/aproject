@@ -1,0 +1,16 @@
+.btn {
+   background-color: var(--black);
+   width: 160px;
+   padding: var(--space-1) 0;
+   font-size: var(--text-normal);
+   text-transform: capitalize;
+   border-radius: var(--r);
+   border: 3px solid var(--secondary);
+}
+
+.btn span {
+    background-image:  linear-gradient(var(--gradient-1));
+    background-clip: text;
+    color: transparent;
+   
+}

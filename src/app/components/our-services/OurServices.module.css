@@ -1,0 +1,39 @@
+.services {
+  padding: var(--space-lg) 0;
+  background-color: var(--black);
+}
+
+.services_list {
+    
+  display: flex;
+  gap: var(--space-5);
+}
+
+.service {
+  flex: 1;
+  height: 323px;
+  background-image: linear-gradient(var(--gradient-service));
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service span {
+  z-index: 1;
+  color: var(--white);
+  font-size: var(--text-3);
+  text-align: center;
+  line-height: 1.4;
+}
+
+.service::after {
+  z-index: 0;
+  content: "";
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  width: 96%;
+  height: 96%;
+  background-color: var(--black);
+}
