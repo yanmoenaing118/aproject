@@ -10,24 +10,21 @@ export default function HeroTitle() {
 
   useEffect(() => {
     nodes.forEach((node) => {
-        node.classList.add(styles.animate);
-      });
-    
+      node.classList.add(styles.animate);
+    });
   }, [nodes]);
 
   return (
     <h1 className={styles.h1}>
-      {(
-        <span ref={ref} split-by="letter" className={styles.business}>
-          Modern &nbsp; Businesses
-        </span>
-      )}
+      <span ref={ref} split-by="letter" className={styles.business}>
+        Modern Businesses
+      </span>
       <br />
-      <span ref={ref2} split-by="letter">
+      <span ref={ref2} split-by="letter" className={styles.solutions}>
         Need Modern
       </span>
       <br />{" "}
-      <span ref={ref3} split-by="letter">
+      <span ref={ref3} split-by="letter" className={styles.solutions2}>
         Solutions
       </span>
     </h1>

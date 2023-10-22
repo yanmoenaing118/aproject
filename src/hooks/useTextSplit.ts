@@ -31,6 +31,9 @@ export default function useTextSplit() {
     const node = document.createElement("span");
 
     node.textContent = text;
+    if(text.trim() == "") {
+        node.style.setProperty("width", "16px")
+    }
     node.style.setProperty("--index", `${index}s`);
 
     return node;
