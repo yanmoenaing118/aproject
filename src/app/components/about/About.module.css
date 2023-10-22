@@ -12,7 +12,8 @@
   color: rgba(var(--text-light-gray));
 }
 
-#about {
+.aboutTitle {
+  opacity: 0;
   width: 100%;
-  z-index: -1;
+  transform: translateX(-100%);
 }

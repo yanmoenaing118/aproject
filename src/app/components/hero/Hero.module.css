@@ -1,5 +1,5 @@
 .hero {
-  height: 100vh;
+  height: 103vh;
   margin-top: calc(-1 * var(--appbar-height));
   background-image: linear-gradient(var(--gradient-hero)),
     url("/assets/hero-bg.png");
