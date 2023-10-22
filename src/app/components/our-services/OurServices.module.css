@@ -1,10 +1,10 @@
 .services {
   padding: var(--space-lg) 0;
   background-color: var(--black);
+  padding-bottom: var(--space-xlg);
 }
 
 .services_list {
-    
   display: flex;
   gap: var(--space-5);
 }
@@ -12,13 +12,31 @@
 .service {
   flex: 1;
   height: 323px;
+  background-position: 0px 0px;
   background-image: linear-gradient(var(--gradient-service));
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: var(--bg-color);
+  animation-name: animateBg;
+  animation-duration: .5s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+  animation-timing-function: ease;
 }
+
+@keyframes animateBg {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: -300px -300px;
+  }
+}
+
+
 
 .service span {
   z-index: 1;
@@ -37,4 +55,5 @@
   width: 96%;
   height: 96%;
   background-color: var(--black);
+  transform: rotate(0);
 }

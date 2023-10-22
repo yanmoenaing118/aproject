@@ -22,8 +22,8 @@ export default function OurServices() {
 
 function Service({ item, reverse }: { item: string; reverse: boolean }) {
   const gradient = !reverse
-    ? "linear-gradient(hsla(316, 77%, 65%, 1), hsla(161, 79%, 40%, 1) )"
-    : "linear-gradient( hsla(161, 79%, 40%, 1), hsla(316, 77%, 65%, 1))";
+    ? "linear-gradient(45deg,hsla(316, 77%, 65%, 1), hsla(161, 79%, 40%, 1) )"
+    : "linear-gradient( 45deg,hsla(161, 79%, 40%, 1), hsla(316, 77%, 65%, 1))";
   return (
     <div
       className={styles.service}
