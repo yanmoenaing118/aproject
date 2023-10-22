@@ -1,0 +1,45 @@
+.h1 {
+  margin-top: calc(-1 * var(--space-2));
+  line-height: 1;
+  font-size: var(--text-xlg);
+}
+
+.h1 > .business{
+    text-transform: uppercase;
+
+  color: var(--primary);
+}
+
+.business {
+
+}
+
+
+.animate {
+    display: inline-block;
+    /* transition-delay: 3s; */
+    animation-delay: calc(var(--index) * 0.2);
+    animation-name: revert;
+    animation-duration: .3s;
+    animation-timing-function: cubicBezier(.71,-0.77,.43,1.67);
+    animation-fill-mode: forwards;
+}
+
+@keyframes revert {
+
+    0% {
+        transform:  scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(-100%) scale(1.5);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0%) scale(1);
+        opacity: 1;
+    }
+
+}

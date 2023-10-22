@@ -1,3 +1,4 @@
+import useScrollMagic from "@/hooks/useScrollMagic";
 import About from "./components/about/About";
 import BuildSteps from "./components/build-steps/BuildSteps";
 import Hero from "./components/hero/Hero";
@@ -11,5 +12,5 @@ export default function Home() {
       <OurServices />
       <BuildSteps />
     </main>
-  )
+  );
 }
