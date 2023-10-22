@@ -48,13 +48,18 @@
   --text-title: var(--text-2);
 
   --text-lg: 6rem;
-  --text-xlg: 8rem;
+  --text-xlg: 9rem;
 
   --r: 4px;
   --r-lg: 8px;
   --r-xlg: 12px;
 }
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 html {
   font-size: 62.5%;
 }
@@ -90,6 +95,9 @@ body {
 body {
 }
 
+main {
+  position: relative;
+}
 a {
   color: inherit;
   text-decoration: none;

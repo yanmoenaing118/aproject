@@ -1,8 +1,9 @@
+"use client";
 import Container from "@/ui/layout/container/Container";
 import SectionTitle from "@/ui/shared/SectionTitle";
 import styles from "./About.module.css";
-
 export default function About() {
+ 
   return (
     <section className={styles.about}>
       <Container>
