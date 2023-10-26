@@ -2,6 +2,7 @@
   padding: var(--space-lg) 0;
   background-color: var(--black);
   padding-bottom: var(--space-xlg);
+  height: 100vh;
 }
 
 .services_list {

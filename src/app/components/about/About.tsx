@@ -13,8 +13,9 @@ export default function About() {
   useEffect(() => {
     if (isInView) {
       animate(`.${styles.aboutTitle}`, {
-        transform: "translateX(0)",
+        transform: "translateY(0)",
         opacity: 1,
+        animationDuration: 2
       });
     }
   }, [isInView]);

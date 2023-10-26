@@ -1,32 +1,27 @@
-import useTextSplit from "@/hooks/useTextSplit";
+import { motion } from "framer-motion";
 import styles from "./HeroTitle.module.css";
-import { useEffect, useState } from "react";
 
 export default function HeroTitle() {
-  const { ref, nodes } = useTextSplit();
-  const { ref: ref2 } = useTextSplit();
-  const { ref: ref3 } = useTextSplit();
-  const [show, setShow] = useState(false);
-
-  useEffect(() => {
-    nodes.forEach((node) => {
-      node.classList.add(styles.animate);
-    });
-  }, [nodes]);
-
   return (
-    <h1 className={styles.h1}>
-      <span ref={ref} split-by="letter" className={styles.business}>
-        Modern Businesses
-      </span>
+    <motion.h1
+      className={styles.h1}
+      initial={{
+        opacity: 0,
+        y: 200,
+      }}
+      animate={{
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 1,
+          ease: "anticipate",
+        },
+      }}
+    >
+      <span className={styles.business}>Modern Businesses</span>
       <br />
-      <span ref={ref2} split-by="letter" className={styles.solutions}>
-        Need Modern
-      </span>
-      <br />{" "}
-      <span ref={ref3} split-by="letter" className={styles.solutions2}>
-        Solutions
-      </span>
-    </h1>
+      <span className={styles.solutions}>Need Modern</span>
+      <br /> <span className={styles.solutions2}>Solutions</span>
+    </motion.h1>
   );
 }

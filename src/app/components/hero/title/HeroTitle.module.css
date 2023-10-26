@@ -41,8 +41,8 @@
 
 .solutions {
   display: inline-block;
-  opacity: 0;
-  animation-name: fadeIn;
+  /* opacity: 0; */
+  /* animation-name: fadeIn; */
   /* animation-delay: 4s; */
   animation-fill-mode: forwards;
   animation-duration: 2s;
@@ -51,8 +51,8 @@
 
 .solutions2 {
   display: inline-block;
-  opacity: 0;
-  animation-name: fadeIn;
+  /* opacity: 0; */
+  /* animation-name: fadeIn; */
   animation-delay: 1s;
   animation-fill-mode: forwards;
   animation-duration: 2s;

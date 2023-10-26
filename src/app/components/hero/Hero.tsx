@@ -3,43 +3,57 @@ import Container from "@/ui/layout/container/Container";
 import styles from "./Hero.module.css";
 import { BsArrowDown } from "react-icons/bs";
 import HeroTitle from "./title/HeroTitle";
-import { gsap } from "gsap";
 import { useEffect, useLayoutEffect, useRef } from "react";
+import { motion } from "framer-motion";
 
 export default function Hero() {
   const ref = useRef(null);
   const arrowRef = useRef(null);
-  useLayoutEffect(() => {
-    // gsap.set(ref.current, {
-    //   opacity: 0
-    // })
-    const tl = gsap.timeline({ delay: 1});
-    tl.to(ref.current, {
-      duration: 1,
-      ease: "power4.out",
-      y: 0,
-      opacity: 1
-    }).to(arrowRef.current, {
-      duration: 1,
-      yoyo: true,
-      y: -50,
-      opacity: 1,
-      ease: "bounce",
-    })
-  }, []);
 
   return (
     <section className={styles.hero + " center-item"}>
       <Container>
         <article className={styles.article}>
           <HeroTitle />
-          <p className="mt-4" ref={ref}>
+          <motion.p
+            initial={{
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 1,
+
+              transition: {
+                duration: 1,
+                delay: 1,
+                easings: ["backOut"],
+              },
+            }}
+            className="mt-4"
+            ref={ref}
+          >
             Our team of expertise is ready to help you!
-          </p>
+          </motion.p>
         </article>
-        <div className={styles.arrow} ref={arrowRef}>
+        <motion.div
+          initial={{
+            opacity: 0,
+            transform: "translate(-50%, 10%)",
+            y: 100,
+          }}
+          animate={{
+            opacity: 1,
+            transform: "translate(-50%, -100%)",
+            transition: {
+              delay: 1.3,
+              ease: "easeInOut",
+              y: -100,
+            },
+          }}
+          className={styles.arrow}
+          ref={arrowRef}
+        >
           <BsArrowDown size="28px" color="inherit" />
-        </div>
+        </motion.div>
       </Container>
     </section>
   );
