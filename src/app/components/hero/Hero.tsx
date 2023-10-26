@@ -4,14 +4,15 @@ import styles from "./Hero.module.css";
 import { BsArrowDown } from "react-icons/bs";
 import HeroTitle from "./title/HeroTitle";
 import { useEffect, useLayoutEffect, useRef } from "react";
-import { motion } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 
 export default function Hero() {
   const ref = useRef(null);
   const arrowRef = useRef(null);
+  const { scrollY } = useScroll();
 
   return (
-    <section className={styles.hero + " center-item"}>
+    <motion.section className={styles.hero + " center-item"}>
       <Container>
         <article className={styles.article}>
           <HeroTitle />
@@ -55,6 +56,6 @@ export default function Hero() {
           <BsArrowDown size="28px" color="inherit" />
         </motion.div>
       </Container>
-    </section>
+    </motion.section>
   );
 }

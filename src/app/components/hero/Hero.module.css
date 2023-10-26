@@ -4,9 +4,10 @@
   background-image: linear-gradient(var(--gradient-hero)),
     url("/assets/hero-bg.png");
   position: relative;
-  background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .article h1,
@@ -21,7 +22,6 @@ background-size: cover;
   /* opacity: 0; */
 }
 
-
 .arrow {
   color: var(--white);
   position: absolute;
@@ -29,5 +29,4 @@ background-size: cover;
   left: 50%;
   transform: translateX(-50%);
   /* opacity: 0; */
-  
 }
